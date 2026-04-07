@@ -1,0 +1,35 @@
+# Python cache / bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build / packaging artifacts
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+
+# Git / editor metadata
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Local environment / secrets
+.env
+.env.*
+
+# OS/log noise
+*.log
+*.tmp
+Thumbs.db
+.DS_Store

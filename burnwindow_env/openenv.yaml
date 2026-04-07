@@ -1,0 +1,26 @@
+name: BurnWindow
+title: BurnWindow: Prescribed Fire Authorization Agent
+version: 1.0.0
+entrypoint: burnwindow_env.env:BurnWindowEnv
+episode:
+  max_steps: 30
+tasks:
+  - name: easy
+    description: 5 units, deterministic weather, no villages
+  - name: medium
+    description: 10 units, stochastic weather, some villages
+  - name: hard
+    description: 15 units, stochastic weather, limited crews, higher escape risk
+actions:
+  - ignite(unit_id)
+  - hold(unit_id)
+  - monitor(unit_id)
+  - suppress(unit_id)
+  - reassign_crew(unit_id)
+observation:
+  includes:
+    - units with fuel_load, risk_score, burned, near_village, firebreak_present, on_fire
+    - current weather
+    - day
+    - active fires
+    - crew status
