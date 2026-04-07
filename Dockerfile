@@ -7,4 +7,4 @@ COPY . .
 RUN pip install --no-cache-dir openai pydantic pyyaml
 
 ENV PYTHONPATH=/app
-CMD ["python", "-m", "burnwindow_env/inference.py"]
+CMD ["python", "burnwindow_env/inference.py"]
