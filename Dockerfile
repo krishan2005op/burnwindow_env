@@ -2,9 +2,9 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY . /app/burnwindow_env
+COPY . .
 
 RUN pip install --no-cache-dir openai pydantic pyyaml
 
 ENV PYTHONPATH=/app
-CMD ["python", "-m", "burnwindow_env.inference"]
+CMD ["python", "-m", "burnwindow_env/inference.py"]
